@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { 
+  TopNavbar,
+  Header,
+  MarkdownPreviewer,
+  Footer, 
+  defaultMd,
+} from "./components";
+import "./App.css";
+
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      markdown: defaultMd,
+    }
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      markdown: e.target.value,
+    })
+  }
+
+  render() {
+      const { markdown } = this.state;
+      return (
+        <div className="App">
+          <TopNavbar />
+          <Header />
+          <MarkdownPreviewer markdown={markdown} onChange={this.handleChange} />
+          <Footer />
+        </div>
+    );
+  }
 }
 
 export default App;

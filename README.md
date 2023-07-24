@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+[![ReactJs](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![React-Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://react-bootstrap.netlify.app/)
+
+# Markdown Previewer - [**freeCodeCamp**](https://www.freecodecamp.org/) Front End Libraries Certification
+
+## Screenshot
+![](src/assets/markdownPreviewer-image.png)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
